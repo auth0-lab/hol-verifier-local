@@ -4,3 +4,9 @@ This sample application shows how to perform Verifiable Presentation verificatio
 
 To see this sample app but with an Auth0 verifier, check out [https://github.com/auth0-lab/hol-verifier-auth0](https://github.com/auth0-lab/hol-verifier-auth0)
 
+High level notes:
+
+- `/api/verify/start` - called by this app's UI to start the verification process
+- `/api/verify/check` - called by this app, every second, to check the status of a previously started process
+- `/api/verify/request/:id` - called by the wallet to get the full details of the presentation request
+- `/api/verify/response/:id`- called by the wallet, it posts the presentation here
